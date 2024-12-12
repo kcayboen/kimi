@@ -32,7 +32,6 @@
             </div>
         </div>
     </header>
-
     <section class="about" id="about">
         <div class="container">
             <div class="content">
@@ -66,7 +65,7 @@
                 <div class="box wow bounceInUp animated" data-wow-delay="0.4s">
                     <div class="inner">
                         <div class="img">
-                            <img src="images/gym3.jpg" alt="about" />
+                            <img src="images/perfect.jpg" alt="about" />
                         </div>
                         <div class="text">
                             <h4>Build Perfect Body</h4>

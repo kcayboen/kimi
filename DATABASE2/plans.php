@@ -26,7 +26,6 @@
     </div>
 </nav>
 <div class="container">
-    
 <h3>Plans</h3>
     <table border="1" class="member-table">
         <thead>
@@ -50,7 +49,6 @@
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
-
             $sql = "SELECT * FROM plans";
             $result = $conn->query($sql);
 
@@ -72,7 +70,6 @@
             } else {
                 echo "<tr><td colspan='5'>No plans found</td></tr>";
             }
-
             $conn->close();
             ?>
         </tbody>
@@ -96,8 +93,6 @@
             <button type="submit" name="delete_plan" class="btn delete">Delete Plan</button>
         </div>
     </form>
-
 </div>
-
 </body>
 </html>

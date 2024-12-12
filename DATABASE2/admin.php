@@ -136,9 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         }
         $stmt->close();
     }
-
-
-    
     // Handling Plans
     // Add a new plan
 if (isset($_POST['add_plan'])) {
@@ -152,7 +149,6 @@ if (isset($_POST['add_plan'])) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
 // Update an existing plan
 if (isset($_POST['update_plan'])) {
     $id = $_POST['id'];
@@ -166,7 +162,6 @@ if (isset($_POST['update_plan'])) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
 // Delete a plan
 if (isset($_POST['delete_plan'])) {
     $id = $_POST['id'];
@@ -178,7 +173,6 @@ if (isset($_POST['delete_plan'])) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-    
     // Handling Classes
 if (isset($_POST['add_class'])) {
     $name = $_POST['name'];
@@ -197,7 +191,6 @@ if (isset($_POST['add_class'])) {
     }
     $stmt->close();
 }
-
 if (isset($_POST['update_class'])) {
     $id = $_POST['id'];
     $name = $_POST['name'];
@@ -216,10 +209,8 @@ if (isset($_POST['update_class'])) {
     }
     $stmt->close();
 }
-
 if (isset($_POST['delete_class'])) {
     $id = $_POST['id'];
-
     $stmt = $conn->prepare("DELETE FROM classes WHERE classes_id=?");
     $stmt->bind_param("i", $id);
 
@@ -239,7 +230,6 @@ if (isset($_POST['delete_class'])) {
     <title>Gym Membership Management</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
 </head>
-
 <body>
 <div class="navbar-container">
         <a href="admin.php" class="navbar-logo">Gym Management</a>
